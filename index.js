@@ -1,7 +1,7 @@
 const axios = require("axios");
 const sha1 = require("js-sha1");
 
-const TOKEN = "a5b9923cd9749e95e27bcc276c1597bf9e8dd969";
+const TOKEN = ""; // *TOKEN CODENATION*
 
 fs = require("fs");
 
@@ -29,21 +29,21 @@ axios({
         console.log(err);
     });
 
-// function criptografar(frase, casas) {
-//     let palavras = frase.toLowerCase();
-//     let res = new RegExp("[a-z]");
-//     let criptografado = "";
+function criptografar(frase, casas) {
+    let palavras = frase.toLowerCase();
+    let res = new RegExp("[a-z]");
+    let criptografado = "";
 
-//     palavras.split("").forEach(k => {
-//         if (res.test(k)) {
-//             count = analfabeto.indexOf(k) + casas;
-//             criptografado += analfabeto[count > 26 ? count - 26 : count];
-//         } else {
-//             criptografado += k;
-//         }
-//     });
-//     return criptografado;
-// }
+    palavras.split("").forEach(k => {
+        if (res.test(k)) {
+            count = analfabeto.indexOf(k) + casas;
+            criptografado += analfabeto[count > 26 ? count - 26 : count];
+        } else {
+            criptografado += k;
+        }
+    });
+    return criptografado;
+}
 
 function descriptografar(frase, casas) {
     let palavras = frase.toLowerCase();
