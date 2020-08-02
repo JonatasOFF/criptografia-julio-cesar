@@ -5,7 +5,7 @@ const TOKEN = ""; // *TOKEN CODENATION*
 
 fs = require("fs");
 
-const analfabeto = "abcdefghijklmnopqrstuvwxyz".split("");
+const alfabeto = "abcdefghijklmnopqrstuvwxyz".split("");
 
 axios({
         method: "get",
@@ -36,8 +36,8 @@ function criptografar(frase, casas) {
 
     palavras.split("").forEach(k => {
         if (res.test(k)) {
-            count = analfabeto.indexOf(k) + casas;
-            criptografado += analfabeto[count > 26 ? count - 26 : count];
+            count = alfabeto.indexOf(k) + casas;
+            criptografado += alfabeto[count > 26 ? count - 26 : count];
         } else {
             criptografado += k;
         }
@@ -52,8 +52,8 @@ function descriptografar(frase, casas) {
 
     palavras.split("").forEach(k => {
         if (res.test(k)) {
-            count = analfabeto.indexOf(k) - casas;
-            descriptografado += analfabeto[count < 0 ? count + 26 : count];
+            count = alfabeto.indexOf(k) - casas;
+            descriptografado += alfabeto[count < 0 ? count + 26 : count];
         } else {
             descriptografado += k;
         }
